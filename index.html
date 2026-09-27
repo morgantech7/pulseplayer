@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Pulse Player</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bg-glow glow-one"></div>
+  <div class="bg-glow glow-two"></div>
+
+  <header class="nav">
+    <div class="brand"><span class="brand-icon">PL</span><span>PULSE PLAYER</span></div>
+    <a class="nav-link" href="#donate">Support the project</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">✦ KEEP THE MUSIC PLAYING</div>
+        <h1>Help build the next generation of <span>media playback.</span></h1>
+        <p>Pulse Player is built with passion for people who want a clean, modern and powerful way to enjoy their music and videos.</p>
+        <div class="hero-actions">
+          <a href="#donate" class="btn primary">Support Pulse Player <span>→</span></a>
+          <a href="#why" class="btn ghost">Why donate?</a>
+        </div>
+      </div>
+
+      <div class="player-card">
+        <div class="card-top"><span class="live-dot"></span> NOW PLAYING</div>
+        <div class="art"><div class="art-ring"></div><div class="play">▶</div></div>
+        <div class="track">Pulse Player</div>
+        <div class="artist">Your music. Your videos. Your experience.</div>
+        <div class="progress"><span></span></div>
+        <div class="times"><span>01:24</span><span>03:48</span></div>
+        <div class="controls"><span>↶</span><span>◀</span><b>▶</b><span>▶</span><span>↷</span></div>
+      </div>
+    </section>
+
+    <section id="why" class="features">
+      <div class="section-heading">
+        <div class="eyebrow">WHY SUPPORT?</div>
+        <h2>Your support keeps development moving.</h2>
+        <p>Donations can help fund development, testing, design, hosting and future features.</p>
+      </div>
+      <div class="feature-grid">
+        <article><div class="feature-icon">⚡</div><h3>Faster development</h3><p>More time can go into improvements, bug fixes and new features.</p></article>
+        <article><div class="feature-icon">🎨</div><h3>Better design</h3><p>Help make the player feel polished, modern and enjoyable to use.</p></article>
+        <article><div class="feature-icon">🛠</div><h3>Long-term support</h3><p>Support testing, maintenance and future releases of the project.</p></article>
+      </div>
+    </section>
+
+    <section id="donate" class="donate-section">
+      <div class="donate-card">
+        <div class="donate-left">
+          <div class="eyebrow">SUPPORT THE DEVELOPER</div>
+          <h2>Buy me a coffee ☕</h2>
+          <p>Every contribution is appreciated. Choose an amount below or enter your own amount.</p>
+
+          <div class="amounts" id="amounts">
+            <button data-amount="3">$3</button>
+            <button data-amount="5" class="selected">$5</button>
+            <button data-amount="10">$10</button>
+            <button data-amount="20">$20</button>
+          </div>
+
+          <div class="custom-row">
+            <label for="customAmount">Custom amount</label>
+            <div class="input-wrap"><span>$</span><input id="customAmount" type="number" min="1" step="1" placeholder="Enter amount"></div>
+          </div>
+
+          <button id="donateBtn" class="donate-btn">
+    Donate $5 <span>→</span>
+</button>
+
+<small class="secure">
+    💬 You will be redirected to WhatsApp to arrange your donation.
+</small>
+
+<script>
+document.getElementById("donateBtn").addEventListener("click", function () {
+    const phone = "256765443001";
+
+    const message =
+        "Hello Morgan, I would like to donate $5 to support Pulse Player.";
+
+    const whatsappUrl =
+        "https://wa.me/" + +256765443001 + "?text=" + encodeURIComponent(message);
+
+    window.open(whatsappUrl, "_blank");
+});
+</script>
+
+        <div class="impact">
+          <div class="coffee-icon">☕</div>
+          <h3>One coffee can help.</h3>
+          <p>Your support helps keep Pulse Player independent and continuously improving.</p>
+          <div class="goal">
+            <div class="goal-head"><span>Development goal</span><strong>42%</strong></div>
+            <div class="goal-bar"><span></span></div>
+            <div class="goal-foot"><span>$420 raised</span><span>$1,000 goal</span></div>
+          </div>
+          <div class="quote">“Built with passion. Supported by the community.”</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="other-support">
+      <h2>Prefer another way to support?</h2>
+      <p>You can also share Pulse Player with friends, report bugs, suggest features, or simply keep using it.</p>
+      <div class="support-links">
+        <a href="#" onclick="shareProject(); return false;">↗ Share Pulse Player</a>
+        <a href="https://wa.me/256775443001?text=Hello%20Morgan.">✉ Contact developer</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© <span id="year"></span> Pulse Player [+256-765-443-001]</span><span>Made with ♥ for music lovers by Morgan-Tech</span></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
